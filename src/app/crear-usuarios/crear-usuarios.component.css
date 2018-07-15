@@ -1,0 +1,8 @@
+.clear{
+    margin: 15px;
+}
+
+.btn-save{
+    cursor: pointer;
+    font-weight: bold;
+}

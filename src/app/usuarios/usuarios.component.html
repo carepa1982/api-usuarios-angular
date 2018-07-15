@@ -1,0 +1,27 @@
+<h1>Usuarios Registrados</h1>
+<div class="clear"></div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Codigo</th>
+      <th scope="col">Primer Nombre</th>
+      <th scope="col">Segundo Nombre</th>
+      <th scope="col">Login</th>
+      <th scope="col">Email</th>
+      <th scope="col">Acción</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of usuarios">
+      <td>{{ item.codigo }}</td>
+      <td>{{ item.primerNombre }}</td>
+      <td>{{ item.segundoNombre }}</td> 
+      <td>{{ item.login }}</td>
+      <td>{{ item.email }}</td>
+      <td>
+        <img src="../../assets/edit.png" class="editIcon" (click)="editar(item)">
+        <img src="../../assets/delete.png" class="editIcon" (click)="eliminar(item)">
+      </td>
+    </tr>
+  </tbody>
+</table>

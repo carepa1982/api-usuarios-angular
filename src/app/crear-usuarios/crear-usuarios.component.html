@@ -1,0 +1,36 @@
+<div class="clear"></div>
+<h1>Crear nuevo usuario</h1>
+<form class="form-horizontal" main-form>
+  <div *ngIf="!isValid" class="alert alert-danger" role="alert">
+      <strong>Danger</strong> {{ message }}
+    </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="primerNombre"><span class="required">*</span>Nombre:</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="primerNombre" id="primerNombre" [(ngModel)]="usuarios.primerNombre" placeholder="Ingreso Su Nombre">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="segundoNombre"><span class="required">*</span>Apellidos:</label>
+    <div class="col-sm-4"> 
+      <input type="text" class="form-control" name="segundoNombre" id="segundoNombre"[(ngModel)]="usuarios.segundoNombre" placeholder="Ingrese su apellido">
+    </div>
+  </div>
+  <div class="form-group">
+      <label class="control-label col-sm-2" for="login"><span class="required">*</span>Login:</label>
+      <div class="col-sm-4"> 
+        <input type="text" class="form-control" name="login" id="login" [(ngModel)]="usuarios.login" placeholder="Ingrese su login">
+      </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" for="email"><span class="required">*</span>Email:</label>
+     <div class="col-sm-4"> 
+          <input type="email" class="form-control" name="email" id="email" [(ngModel)]="usuarios.email" placeholder="Ingrese su Email">
+      </div>
+    </div>
+  <div class="form-group"> 
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" (click)="saveOrUpdate()" class="btn btn-default btn-save">Guardar</button>
+    </div>
+  </div>
+</form>
