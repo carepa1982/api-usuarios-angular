@@ -1,7 +1,8 @@
-import { UsuariosModel } from './../model/usuarios.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+
 import { UsuariosService } from './usuarios.service';
+import { UsuariosModel } from './../model/usuarios.model';
 
 @Component({
   selector: 'app-usuarios',
@@ -26,7 +27,7 @@ export class UsuariosComponent implements OnInit {
 
   public editar(usuarios:UsuariosModel): void{
     sessionStorage.setItem('usuarios' ,JSON.stringify(usuarios));
-    this.router.navigate(['/crearUsuariosComponent']);
+    this.router.navigate(['/CrearUsuariosComponent']);
   }
 
   public eliminar(usuarios: UsuariosModel): void {

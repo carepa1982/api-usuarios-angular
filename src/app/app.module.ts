@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 
-import { appRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { CrearUsuariosComponent } from './crear-usuarios/crear-usuarios.component';
@@ -16,7 +16,7 @@ import { CrearUsuariosComponent } from './crear-usuarios/crear-usuarios.componen
   ],
   imports: [ 
     BrowserModule,
-    appRoutingModule,
+    AppRoutingModule,
     HttpClientModule,
     FormsModule
    ],

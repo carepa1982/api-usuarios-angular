@@ -1,7 +1,9 @@
+import { NgModule } from '@angular/core';
 import { CrearUsuariosComponent } from './crear-usuarios/crear-usuarios.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import {RouterModule, Routes } from '@angular/router';
-import { NgModule } from '@angular/core';
+
+
 import { AppComponent } from './app.component';
 
 const routes: Routes =[
@@ -15,4 +17,4 @@ const routes: Routes =[
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
 })
-export class  appRoutingModule { }
+export class  AppRoutingModule { }
