@@ -13,15 +13,15 @@
   </thead>
   <tbody>
       <tr *ngFor="let item of usuarios">
-      <td>{{ item.codigo }}</td>
-      <td>{{ item.primerNombre }}</td>
-      <td>{{ item.segundoNombre }}</td> 
-      <td>{{ item.login }}</td>
-      <td>{{ item.email }}</td>
-      <td>
-        <img src="../../assets/edit.png" class="editIcon" (click)="editar(item)">
-        <img src="../../assets/delete.png" class="editIcon" (click)="eliminar(item)">
-      </td>
-    </tr>
+        <td>{{ item.codigo }}</td>
+        <td>{{ item.primerNombre }}</td>
+        <td>{{ item.segundoNombre }}</td> 
+        <td>{{ item.login }}</td>
+        <td>{{ item.email }}</td>
+        <td>
+          <img src="../../assets/edit.png" class="editIcon" (click)="editar(item)">
+          <img src="../../assets/delete.png" class="editIcon" (click)="eliminar(item)">
+        </td>
+      </tr>
   </tbody>
 </table>

@@ -1,4 +1,4 @@
-export class CustomResponseType{
-    public message : string;
-    public responseCode : number;
+export class CustomResponseType {
+    public message: string;
+    public responseCode: number;
 }
