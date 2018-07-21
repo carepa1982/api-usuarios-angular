@@ -19,8 +19,8 @@
         <td>{{ item.login }}</td>
         <td>{{ item.email }}</td>
         <td>
-          <img src="../../assets/edit.png" class="editIcon" (click)="editar(item)">
-          <img src="../../assets/delete.png" class="editIcon" (click)="eliminar(item)">
+          <button type="button" name="editar" (click)='editar(item)' class="btn btn-success btn-sm">editar</button>
+          <button type="button" name="eliminar" (click)='delete(item)' class="btn btn-danger btn-sm">eliminar</button>
         </td>
       </tr>
   </tbody>

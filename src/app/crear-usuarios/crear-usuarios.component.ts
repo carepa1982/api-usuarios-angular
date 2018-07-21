@@ -3,6 +3,7 @@ import { UsuariosModel } from './../model/usuarios.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { OK } from './../model/httpstatus';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-crear-usuarios',
@@ -36,13 +37,14 @@ export class CrearUsuariosComponent implements OnInit {
         this.crearUsuariosService.saveOrUpdate(this.usuarios).subscribe(res => {
         if (res.responseCode = OK) {
           this.router.navigate(['/usuariosComponent']);
+          Swal({title: res.message, timer: 10000 , type: 'success', confirmButtonColor: '#10A516'});
         } else {
           this.message = res.message;
           this.isValid = false;
         }
       });
     } else {
-      this.message = 'Los campos con * son obligatorios';
+      Swal({title: 'Los campos con * son Obligatorios!', timer: 10000 , type: 'warning', confirmButtonColor: '#FF4233'});
     }
     sessionStorage.clear();
   }

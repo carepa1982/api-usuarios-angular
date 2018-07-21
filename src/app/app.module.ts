@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { CrearUsuariosComponent } from './crear-usuarios/crear-usuarios.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuariosComponent,
-    CrearUsuariosComponent
+    CrearUsuariosComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

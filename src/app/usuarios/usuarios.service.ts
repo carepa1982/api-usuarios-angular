@@ -7,14 +7,16 @@ import { UsuariosModel } from '../model/usuarios.model';
 @Injectable()
 export class UsuariosService {
 
+  private urlEndPoint = 'http://localhost:8081/api/usuario';
+
   constructor(private http: HttpClient) {}
 
   public getUsuarios(): Observable<UsuariosModel[]> {
-    return this.http.get<UsuariosModel[]>('http://localhost:8081/api/usuario');
+    return this.http.get<UsuariosModel[]>(this.urlEndPoint);
   }
 
   public eliminar(usuarios) {
-   return this.http.delete('http://localhost:8081/api/usuario' + '/' + usuarios.codigo);
+   return this.http.delete(this.urlEndPoint + '/' + usuarios.codigo);
   }
 
 }
